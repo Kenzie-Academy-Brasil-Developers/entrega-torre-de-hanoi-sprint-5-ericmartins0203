@@ -17,11 +17,32 @@ section{
     width: 100vw
 }
 div{
+    height: 50px;
+    border: 1px solid black;
+}
+.container > session{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     border: 1px solid black;
     margin:10px;
     width:30%;
     height:300px
+}
+#primeiro{
+    width:50px;
+    background-color: red;
+}
+#segundo{
+    width:100px;
+    background-color: yellow;
+}
+#terceiro{
+    width: 150px;
+    background-color: blue;
+}
+#quarto{
+    width: 200px;
+    background-color: orange;
 }
