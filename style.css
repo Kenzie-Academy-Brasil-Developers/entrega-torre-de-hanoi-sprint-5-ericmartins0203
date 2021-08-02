@@ -11,7 +11,7 @@ header{
     width: 100%;
     text-align: center;
 }
-section{
+main{
     display: flex;
     flex-direction: row;
     width: 100vw
@@ -22,8 +22,7 @@ div{
 }
 .container > session{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
     align-items: center;
     border: 1px solid black;
     margin:10px;
