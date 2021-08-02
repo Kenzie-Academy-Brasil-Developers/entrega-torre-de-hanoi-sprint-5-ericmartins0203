@@ -17,7 +17,7 @@ section{
     width: 100vw
 }
 div{
-    height: 50px;
+    height: 20%;
     border: 1px solid black;
 }
 .container > session{
@@ -31,18 +31,18 @@ div{
     height:300px
 }
 #primeiro{
-    width:50px;
+    width:20%;
     background-color: red;
 }
 #segundo{
-    width:100px;
+    width:45%;
     background-color: yellow;
 }
 #terceiro{
-    width: 150px;
+    width: 60%;
     background-color: blue;
 }
 #quarto{
-    width: 200px;
+    width: 75%;
     background-color: orange;
 }
