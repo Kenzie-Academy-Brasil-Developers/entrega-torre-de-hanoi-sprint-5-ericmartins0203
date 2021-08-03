@@ -5,9 +5,11 @@ let header = document.querySelector('header')
 let counter =document.createElement('span')
 container.addEventListener('click',saveClick)
 
-
 function criandoJogo(){
     let container =document.querySelector("main")
+    if (container.childElementCount!==0){
+        return
+    }
     let arrS =['esquerda','centro', 'direita']
     let arrD = ['quarto','terceiro','segundo','primeiro']
 
@@ -25,8 +27,6 @@ function criandoJogo(){
     
     counter.innerText = 'Movimentos = ' + countMove
     header.append(counter)
-
-
 }
 
 function saveClick(e){
@@ -42,13 +42,11 @@ function saveClick(e){
     let vitoria = document.querySelector('#direita').childElementCount;
     if (vitoria === 4){
         alert('Parabéns, você conseguiu!!');
-
-        // location.reload();
     }
+   move(a,b)
+}
 
-   }
-
-   function mover(a,b){
+function mover(a,b){
     let origem = document.getElementById(a);
     let destino = document.getElementById(b);
     let elemento = origem.lastElementChild;
@@ -66,9 +64,8 @@ function saveClick(e){
     if(elementoDestino>elementoLargura ){
         destino.append(elemento);
     }
-
-
 }
+
 function reset(){
     location.reload();
 }

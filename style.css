@@ -6,8 +6,8 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 }
 span{
     position: absolute;
-    top : 15%;
-    right: 20%
+    top : 9%;
+    right: 18%
 }
 body{
     text-align: center;
@@ -41,6 +41,8 @@ div{
     height: 20%;
     border: 1px solid black;
 }
+
+
 @media screen and (max-width:499px){
     
     main{
@@ -85,6 +87,7 @@ div{
     button{
         background-color: violet;
         color: yellow;
+        padding: 5px
     }
     
 }
@@ -118,14 +121,18 @@ div{
     session{
         font-size: 0px;
     }
-    p{
-    }   
+    span{
+        position: absolute;
+        top : 15%;
+        right: 20%
+    } 
     button{
         margin-top: 25px;
         width: 200px;
         border-radius: 50%;
         background-color: black;
         color: bisque;
+        padding: 10px;
     }
     button:hover{
         -webkit-box-shadow: 5px 5px 15px 5px #000000; 
