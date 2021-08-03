@@ -123,4 +123,13 @@ div{
         background-color: black;
         color: bisque;
     }
+    button:hover{
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+        
+    }
+    main session:hover{
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
 }
