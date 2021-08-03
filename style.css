@@ -5,9 +5,12 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 }
 span{
+<<<<<<< HEAD
     position: absolute;
     top : 9%;
     right: 18%
+=======
+>>>>>>> 5689d072cb2735ec30c5f73e58416c6190e863a1
 }
 body{
     text-align: center;
