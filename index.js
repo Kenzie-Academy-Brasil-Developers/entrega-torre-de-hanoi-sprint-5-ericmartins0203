@@ -4,8 +4,8 @@ section.addEventListener('click',saveClick)
 
 function saveClick(e){
   
-    console.log(clicks)
     clicks.push(e.target.id)
+    console.log(clicks)
     if (clicks.length===2){
    
     mover(clicks[0],clicks[1])
