@@ -7,6 +7,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 body{
     text-align: center;
+    margin: 0 auto;
 }
 h1{
    margin: 5% 0% 
