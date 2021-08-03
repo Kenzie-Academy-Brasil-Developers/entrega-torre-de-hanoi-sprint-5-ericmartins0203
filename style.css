@@ -2,17 +2,14 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    color:black
 }
+
 span{
-<<<<<<< HEAD
-    position: absolute;
-    top : 9%;
-    right: 18%
-=======
->>>>>>> 5689d072cb2735ec30c5f73e58416c6190e863a1
 }
 body{
+    
+    background-color:aquamarine;
     text-align: center;
     margin:0 auto;
 }
@@ -32,19 +29,30 @@ header{
 main{
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100vw;
     justify-content:space-evenly
 }
 session{
     position: relative;
-    opacity: 100%;
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    background:white;
 }
+
 div{
     z-index: -1;
     height: 20%;
     border: 1px solid black;
 }
-
+.hidden{
+    display: none;
+}
+.parabens{
+    font-size: 300%;
+    font-weight: 700;
+    position: absolute;
+}
 
 @media screen and (max-width:499px){
     
@@ -52,7 +60,6 @@ div{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        margin-left: 33%;
     }
     .container > session{
         display: flex;
@@ -65,20 +72,20 @@ div{
     }
     #primeiro{
         width:20%;
-        background-color: brown;
+        background-color: red;
         align-items: center;
     }
     #segundo{
         width:45%;
-        background-color: olive;
+        background-color: yellow;
     }
     #terceiro{
         width: 60%;
-        background-color: black;
+        background-color: blue;
     }
     #quarto{
         width: 75%;
-        background-color: blue;
+        background-color: orange;
     }
     session{
         
@@ -88,10 +95,12 @@ div{
         font-size: 80%;
     }
     button{
-        background-color: violet;
-        color: yellow;
-        padding: 5px
+        background-color: teal;
+        color: white;
+        padding: 5px;
+        border:none;
     }
+
     
 }
 @media screen and (min-width: 500px) {
@@ -123,19 +132,18 @@ div{
     }
     session{
         font-size: 0px;
+        cursor:pointer
     }
-    span{
-        position: absolute;
-        top : 15%;
-        right: 20%
-    } 
+    
     button{
         margin-top: 25px;
         width: 200px;
-        border-radius: 50%;
-        background-color: black;
-        color: bisque;
+        border-radius: 5px;
+        background-color: teal;
+        color: white;
         padding: 10px;
+        border:none;
+        cursor:pointer
     }
     button:hover{
         -webkit-box-shadow: 5px 5px 15px 5px #000000; 

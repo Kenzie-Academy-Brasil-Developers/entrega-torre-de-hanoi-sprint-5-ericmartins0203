@@ -3,6 +3,8 @@ let countMove = 0
 let container =document.querySelector("main")
 let header = document.querySelector('header')
 let counter =document.createElement('span')
+let tempoInicial = 0
+
 container.addEventListener('click',saveClick)
 
 function criandoJogo(){
@@ -27,6 +29,10 @@ function criandoJogo(){
     
     counter.innerText = 'Movimentos = ' + countMove
     header.append(counter)
+
+    let button =document.querySelector('#iniciar')
+    button.classList.add('hidden')
+    tempoInicial = Date.now()
 }
 
 function saveClick(e){
@@ -41,9 +47,15 @@ function saveClick(e){
     }
     let vitoria = document.querySelector('#direita').childElementCount;
     if (vitoria === 4){
-        alert('Parabéns, você conseguiu!!');
+        let tempofinal = Date.now()
+        let tempo = Math.round((tempofinal - tempoInicial)/1000)
+        let parabens = document.createElement('p');
+        parabens.innerText = `Parabéns, você conseguiu!! Agora tente fazer com 15 movimentos. Seu tempo de jogo foi  ${tempo} s`
+        parabens.classList.add('parabens')
+        container.append(parabens)
+        
     }
-   move(a,b)
+   mover()
 }
 
 function mover(a,b){
