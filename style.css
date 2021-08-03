@@ -5,6 +5,17 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 }
 
+body{
+    text-align: center;
+}
+h1{
+   margin: 5% 0% 
+}
+body p{
+    margin: 5% 10%;
+    font-weight: 500;
+}
+
 header{
     height:10%;
     width: 100%;
@@ -20,6 +31,7 @@ div{
     border: 1px solid black;
 }
 @media screen and (max-width:499px){
+    
     main{
         display: flex;
         flex-direction: column;
@@ -57,13 +69,11 @@ div{
         font-size: 0px;
     }
     p{
-        margin-left: 20%;
         font-size: 80%;
     }
     button{
         background-color: violet;
         color: yellow;
-        margin-left: 43%;
     }
     
 }
@@ -98,11 +108,9 @@ div{
         font-size: 0px;
     }
     p{
-        margin-left: 36%;
     }   
     button{
         margin-top: 25px;
-        margin-left: 40%;
         width: 200px;
         border-radius: 50%;
         background-color: black;
