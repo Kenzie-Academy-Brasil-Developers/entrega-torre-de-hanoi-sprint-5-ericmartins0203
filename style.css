@@ -4,7 +4,11 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
     box-sizing: border-box;
 
 }
-
+span{
+    position: absolute;
+    top : 15%;
+    right: 20%
+}
 body{
     text-align: center;
     margin:0 auto;

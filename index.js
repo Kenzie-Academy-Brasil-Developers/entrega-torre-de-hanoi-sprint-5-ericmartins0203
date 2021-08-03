@@ -1,15 +1,44 @@
 let clicks =[]
-let section =document.querySelector("main")
-section.addEventListener('click',saveClick)
+let countMove = 0
+let container =document.querySelector("main")
+let header = document.querySelector('header')
+let counter =document.createElement('span')
+container.addEventListener('click',saveClick)
+
+
+function criandoJogo(){
+    let container =document.querySelector("main")
+    let arrS =['esquerda','centro', 'direita']
+    let arrD = ['quarto','terceiro','segundo','primeiro']
+
+    for (let i = 0;i<arrS.length;i++){
+        let section = document.createElement('session')
+        section.id = arrS[i]
+        container.append(section)
+    } 
+    for (let m=0;m<arrD.length;m++){
+        let div =document.createElement('div')
+        let esquerdo = document.querySelector('#esquerda')
+        div.id = arrD[m]
+        esquerdo.append(div)
+    }
+    
+    counter.innerText = 'Movimentos = ' + countMove
+    header.append(counter)
+
+
+}
 
 function saveClick(e){
   
     clicks.push(e.target.id)
     console.log(clicks)
     if (clicks.length===2){
-   
     mover(clicks[0],clicks[1])
-    clicks =[];}
+    clicks =[];
+    countMove+=1
+    counter.innerText = 'Movimentos = ' + countMove
+    }
     let vitoria = document.querySelector('#direita').childElementCount;
     if (vitoria === 4){
         alert('Parabéns, você conseguiu!!');
