@@ -56,7 +56,6 @@ function saveClick(e){
         container.append(parabens)
         
     }
-   mover()
 }
 
 function mover(a,b){
