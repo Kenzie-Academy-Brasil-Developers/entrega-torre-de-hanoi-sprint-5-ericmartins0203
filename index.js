@@ -1,12 +1,16 @@
+const container =document.querySelector("main")
+const header = document.querySelector('header')
+const counter =document.createElement('span')
+const button =document.querySelector('#iniciar')
+const arrS =['esquerda','centro', 'direita']
+const arrD = ['quarto','terceiro','segundo','primeiro']
+let tempoInicial = 0
 let clicks =[]
 let countMove = 0
-let container =document.querySelector("main")
-let header = document.querySelector('header')
-let counter =document.createElement('span')
-let tempoInicial = 0
-let arrS =['esquerda','centro', 'direita']
-let arrD = ['quarto','terceiro','segundo','primeiro']
-let button =document.querySelector('#iniciar')
+let mostrador  = document.createElement('span')
+let elementoSelecionado
+header.append(mostrador)
+
 
 container.addEventListener('click',saveClick)
 
@@ -37,14 +41,22 @@ function criandoJogo(){
 }
 
 function saveClick(e){
-  
+    
     clicks.push(e.target.id)
     console.log(clicks)
+    if (document.querySelector(`#${clicks[0]}`).childElementCount!==0){
+        let selecionado = document.querySelector(`#${clicks[0]}`).lastElementChild.id
+        elementoSelecionado = 'Bloco selecionado = '+ selecionado + ';  '
+    }
+    if (clicks.length===1){
+        mostrador.innerText = elementoSelecionado 
+    }
+
     if (clicks.length===2){
-    mover(clicks[0],clicks[1])
-    clicks =[];
-    countMove+=1
-    counter.innerText = 'Movimentos = ' + countMove
+        mover(clicks[0],clicks[1])
+        clicks =[];
+        countMove+=1
+        counter.innerText ='Movimentos = ' + countMove
     }
     let vitoria = document.querySelector('#direita').childElementCount;
     if (vitoria === 4){
