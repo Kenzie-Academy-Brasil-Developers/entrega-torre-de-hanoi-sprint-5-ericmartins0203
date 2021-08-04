@@ -35,9 +35,6 @@ main{
 }
 session{
     position: relative;
-    backdrop-filter: blur( 5.0px );
-    -webkit-backdrop-filter: blur( 5.0px );
-    background:white;
 }
 
 div{
@@ -49,7 +46,7 @@ div{
     display: none;
 }
 .parabens{
-    font-size: 300%;
+    font-size: 200%;
     font-weight: 700;
     position: absolute;
 }

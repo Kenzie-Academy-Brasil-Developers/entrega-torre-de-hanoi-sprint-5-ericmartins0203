@@ -4,33 +4,34 @@ let container =document.querySelector("main")
 let header = document.querySelector('header')
 let counter =document.createElement('span')
 let tempoInicial = 0
+let arrS =['esquerda','centro', 'direita']
+let arrD = ['quarto','terceiro','segundo','primeiro']
+let button =document.querySelector('#iniciar')
 
 container.addEventListener('click',saveClick)
 
 function criandoJogo(){
-    let container =document.querySelector("main")
+    // impede de chamar o começar jogo 2x
     if (container.childElementCount!==0){
         return
     }
-    let arrS =['esquerda','centro', 'direita']
-    let arrD = ['quarto','terceiro','segundo','primeiro']
-
+    //cria session
     for (let i = 0;i<arrS.length;i++){
         let section = document.createElement('session')
         section.id = arrS[i]
         container.append(section)
-    } 
+    }
+    //cria div
     for (let m=0;m<arrD.length;m++){
         let div =document.createElement('div')
         let esquerdo = document.querySelector('#esquerda')
         div.id = arrD[m]
         esquerdo.append(div)
     }
-    
+    //cria contador
     counter.innerText = 'Movimentos = ' + countMove
     header.append(counter)
-
-    let button =document.querySelector('#iniciar')
+    //
     button.classList.add('hidden')
     tempoInicial = Date.now()
 }
@@ -82,22 +83,3 @@ function reset(){
     location.reload();
 }
 
-
-/*se o e.targt.id !== null  
-  
-*/
-
-/*selecionar session de origem
-  selecionar session final
-  verificar se existe div dentro da session
-  se existir, verificar width da div
-  se div movida tiver width menor, mover a div
-  do contrario, nada se move
-*/ 
-
-/*
-condição de finalização
-a torre tem q se forçar na session da direita com todas as divs
-querySeletor(#direito > 'div').length===4
-chamar verificar a cada movimento
-*/
