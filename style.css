@@ -50,6 +50,7 @@ div{
     z-index: -1;
     height: 20%;
     border: 1px solid black;
+    border-radius:5px
 }
 .hidden{
     display: none;
